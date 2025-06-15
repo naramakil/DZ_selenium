@@ -51,7 +51,7 @@ class ApporderTest {
     }
 
     @Test
-    void ValidationEmptyFieldName() {
+    void validationEmptyFieldName() {
         driver.findElement(By.cssSelector("[data-test-id = 'phone'] input")).sendKeys("+79270000000");
         driver.findElement(By.cssSelector("[data-test-id = 'agreement']")).click();
         WebElement form = driver.findElement(By.cssSelector("form"));
@@ -62,7 +62,7 @@ class ApporderTest {
     }
 
     @Test
-    void ValidationFieldNameWithNotCyrilic() {
+    void validationFieldNameWithNotCyrilic() {
         driver.findElement(By.cssSelector("[data-test-id = 'name'] input")).sendKeys("Vasiliy Ivanov");
         driver.findElement(By.cssSelector("[data-test-id = 'phone'] input")).sendKeys("+79270000000");
         driver.findElement(By.cssSelector("[data-test-id = 'agreement']")).click();
@@ -74,7 +74,7 @@ class ApporderTest {
     }
 
     @Test
-    void ValidationEmptyPhoneName() {
+    void validationEmptyPhoneName() {
         driver.findElement(By.cssSelector("[data-test-id = 'name'] input")).sendKeys("Василий Иванов");
         driver.findElement(By.cssSelector("[data-test-id = 'agreement']")).click();
         WebElement form = driver.findElement(By.cssSelector("form"));
@@ -85,7 +85,7 @@ class ApporderTest {
     }
 
     @Test
-    void ValidationEmptyCheckBox() {
+    void validationEmptyCheckBox() {
         driver.findElement(By.cssSelector("[data-test-id = 'name'] input")).sendKeys("Василий Иванов");
         driver.findElement(By.cssSelector("[data-test-id = 'phone'] input")).sendKeys("79270000000");
         driver.findElement(By.cssSelector("[data-test-id = 'agreement']")).click();
